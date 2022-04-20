@@ -158,9 +158,6 @@ func (es *Elasticsearch) Start() error {
 			break
 		} else {
 			es.handler.Consume(hits.String())
-
-			// TODO remove
-			break
 		}
 	}
 
