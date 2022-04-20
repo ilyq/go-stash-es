@@ -2,6 +2,10 @@
 go-stash-es可以把elasticsearch数据导出到json、csv文件
 ![go-stash-es](doc/flow.png)
 
+### 支持
+ - [x] es7
+ - [ ] es8
+
 ### 安装
 ```
 cd stash && go build stash.go
