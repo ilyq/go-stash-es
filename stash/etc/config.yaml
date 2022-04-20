@@ -1,0 +1,10 @@
+ESConf:
+  Name: go-stash-es
+  Addr:
+    - 'http://127.0.0.1:9200'
+  Index: 'filebeat-*'
+  Body: '{"query":{"match_all":{}}}'
+  Size: 100
+Output:
+  Target: json
+  Filename: data.json
