@@ -132,7 +132,7 @@ func (es *Elasticsearch) Start() error {
 
 	hits := gjson.Get(data, "hits.hits")
 	if len(hits.Array()) < 1 {
-		logx.Info("Finished scrolling")
+		logx.Info("Finished")
 		return nil
 	}
 
@@ -154,7 +154,7 @@ func (es *Elasticsearch) Start() error {
 
 		hits := gjson.Get(data, "hits.hits")
 		if len(hits.Array()) < 1 {
-			logx.Info("Finished scrolling")
+			logx.Info("Finished")
 			break
 		} else {
 			es.handler.Consume(hits.String())
