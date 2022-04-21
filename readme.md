@@ -27,6 +27,9 @@ ESConf:
   Size: 100  # query body size
   Username: root
   Password: root
+  Source:  # 设置导出字段
+   - username
+   - email
 Output:
   Target: json
   Filename: data.json
