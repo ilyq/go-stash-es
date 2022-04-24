@@ -1,10 +1,7 @@
 package config
 
-import "github.com/zeromicro/go-zero/core/service"
-
 type (
 	ESConf struct {
-		service.ServiceConf
 		Addr           []string
 		Index          string
 		Body           string
