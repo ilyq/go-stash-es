@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"os"
 
-	jsoniter "github.com/json-iterator/go"
 	"github.com/zeromicro/go-zero/core/logx"
 )
 
@@ -30,7 +29,7 @@ func (m *MessageJsonFileHandler) MappingKeys(keys []string) error {
 
 func (m *MessageJsonFileHandler) Consume(val string) error {
 	var data []map[string]interface{}
-	if err := jsoniter.Unmarshal([]byte(val), &data); err != nil {
+	if err := json.Unmarshal([]byte(val), &data); err != nil {
 		return err
 	}
 
