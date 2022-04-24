@@ -19,7 +19,6 @@ cd stash && go build stash.go
 config.yaml示例如下:
 ```
 ESConf:
-  Name: go-stash-es
   Addr:
     - 'http://127.0.0.1:9200'
   Index: 'filebeat-*'
