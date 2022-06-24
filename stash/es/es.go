@@ -114,6 +114,7 @@ func read(r io.Reader) string {
 func (es *Elasticsearch) Start() error {
 	res, err := es.client7.Search(
 		es.client7.Search.WithIndex(es.index),
+		es.client7.Search.WithIgnoreThrottled(false),
 		es.client7.Search.WithBody(bytes.NewReader([]byte(es.body))),
 		es.client7.Search.WithSize(es.size),
 		es.client7.Search.WithScroll(es.scrollDuration),
