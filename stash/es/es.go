@@ -65,10 +65,12 @@ func NewES(c config.ESConf, handler ConsumeHandler) (*Elasticsearch, error) {
 		ServiceToken:           c.ServiceToken,
 		CertificateFingerprint: c.CertificateFingerprint,
 	}
+	logx.Info("connection to es...")
 	es7Client, err := es7.NewClient(cfg)
 	if err != nil {
 		return nil, err
 	}
+	logx.Info("connected successfully")
 
 	var source []string
 	if len(c.Source) > 0 {
